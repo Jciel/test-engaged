@@ -1,4 +1,4 @@
-export function debounce(fn: Function, wait: number): Function {
+export function debounce(fn: (...args: any[]) => void, wait: number): (...args: any[]) => void {
     let timer: number | undefined;
     return function(...args: any[]){
         if(timer) {

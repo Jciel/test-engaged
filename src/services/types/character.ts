@@ -4,5 +4,5 @@ export type Character = {
     id: number,
     name: string,
     image: string,
-    episodes: Array<Episode>
+    episode: Array<Episode>
 }

@@ -1,18 +1,18 @@
 <template>
   <section class="character-page">
     <div class="image-container">
-      <img :src="selectedCharacter.image" />
+      <img :src="selectedCharacter?.image" />
     </div>
 
     <div class="character-info">
       <div class="name-container">
-        <strong>Name:</strong> {{ selectedCharacter.name }}
+        <strong>Name:</strong> {{ selectedCharacter?.name }}
       </div>
 
       <div class="list-episodes-container">
         <div
             class="character-item"
-            v-for="episode in selectedCharacter.episode">
+            v-for="episode in selectedCharacter?.episode">
           <strong>Episode: </strong> <p>{{ episode.episode }}</p>
           <strong>Title: </strong> <p>{{ episode.name }}</p>
         </div>

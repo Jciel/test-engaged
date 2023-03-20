@@ -8,7 +8,7 @@ const useCharactersStore = defineStore('characters', {
         return {
             info: {} as PageInfo,
             characters: [] as Array<Character>,
-            selectedCharacter: {} as Character | {},
+            selectedCharacter: {} as Character | null
         }
     },
 
@@ -50,7 +50,7 @@ const useCharactersStore = defineStore('characters', {
         },
 
         selectCharacter(name: string) {
-            this.$state.selectedCharacter = this.characters.find((character: Character) => character.name === name) || {}
+            this.$state.selectedCharacter = this.characters.find((character: Character) => character.name === name) || null
         },
 
         listAllCharacters(page: number = 1) {

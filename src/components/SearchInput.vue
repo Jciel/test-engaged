@@ -4,17 +4,30 @@
         placeholder="search"
         class="input"
         type="text"
-        @input="$emit('update:modelValue', $event.target.value)" />
+        :value="value"
+        @input="$emit('update:modelValue', ($event.target as HTMLTextAreaElement).value)" />
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, PropType, toRef } from "vue";
 
 export default defineComponent({
   name: "SearchInput",
 
-  setup() {
+  props: {
+    value: {
+      type: String as PropType<string>,
+      required: true,
+      default: ''
+    }
+  },
+
+  setup(props) {
+
+    return {
+      value: toRef(props, 'value')
+    }
   }
 })
 </script>

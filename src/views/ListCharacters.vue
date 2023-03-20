@@ -2,8 +2,8 @@
   <section class="list-character-page">
     <div class="search-bar-container">
       <search-input
-          v-model="actualSearch"
-          @update:modelValue="searchCharacter">
+          @update:modelValue="searchCharacter"
+          :value="actualSearch">
       </search-input>
     </div>
 
