@@ -7,6 +7,7 @@ Other libs I used:
 * [vue3-pagination 1.0](https://github.com/HENNGE/vue3-pagination)
   * For implementing pagination
 
+You can access the online version [here](https://test-engaged.netlify.app)
 
 Full test description   
 https://engagedu.notion.site/Desafio-Front-end-EngagED-d7543481dd7d4f2da1f5f565303b242c  
